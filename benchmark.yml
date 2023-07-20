@@ -1,0 +1,16 @@
+---
+base: 'https://cacheworker.scuddb.net'
+iterations: 100
+concurrency: 35
+
+plan:
+  #- name: Fetch object
+  #  request:
+  #    url: /dog3.jpg
+  - name: Fetch all dogs, index {{ index }}
+    request:
+      url: /dog{{ item }}.jpg
+    with_items_range:
+      start: 1
+      step: 1
+      stop: 35

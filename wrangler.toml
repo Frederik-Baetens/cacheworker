@@ -1,0 +1,13 @@
+name = "cacheworker"
+main = "src/worker.ts"
+compatibility_date = "2023-06-28"
+account_id = "051c3de644afdf46e7d7ca330aabda58"
+
+[[r2_buckets]]
+binding = 'MY_BUCKET' # <~ valid JavaScript variable name
+bucket_name = 'scudbucket'
+preview_bucket_name = 'scudbucket'
+
+[[routes]]
+custom_domain = true
+pattern = "cacheworker.scuddb.net"
